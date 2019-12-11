@@ -170,3 +170,4 @@ mode "resize" {
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym $mod+r mode "resize"
+bindsym $mod+Shift+s exec "maim -su | xclip -selection clipboard -t image/png"
