@@ -1,3 +1,6 @@
+" vim: foldmethod=marker
+
+" {{{ Plugin setup
 set nocompatible
 filetype off
 
@@ -18,13 +21,10 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
-
 filetype plugin indent on
+" }}}
 
-syntax on
-let g:dracula_colorterm = 0
-colorscheme dracula
-
+" {{{ Language servers
 " python lsp setup
 if executable('pyls')
     " pip install python-language-server
@@ -35,6 +35,29 @@ if executable('pyls')
         \ })
 endif
 
+" html lsp setup
+if executable('html-languageserver')                         
+  au User lsp_setup call lsp#register_server({               
+    \ 'name': 'html-languageserver',                     
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},                                   
+    \ 'whitelist': ['html'],                             
+  \ })                                                       
+endif      
+
+" css language server
+if executable('css-languageserver')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'css-languageserver',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+        \ 'whitelist': ['css', 'less', 'sass'],
+        \ })
+endif
+" }}}
+
+" {{{ General settings
+let g:dracula_colorterm = 0
+colorscheme dracula
+syntax on
 set autoindent			" autoindent duh
 set shiftround 			" round indent to multime of 'shiftwidth'
 set expandtab			" tab is spaces
@@ -55,7 +78,9 @@ set ignorecase			" case shit for search
 set smartcase
 set wildmenu            " display a menu for command auto-completion
 set shortmess+=c
+" }}}
 
+" {{{ Airline and tmuxline
 " some airline/tmuxline themes n shiet
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -71,3 +96,4 @@ let g:tmuxline_preset = {
       \'win'  : '#I #W',
       \'cwin' : '#I #W',
       \'z'    : '#H'}
+" }}}
