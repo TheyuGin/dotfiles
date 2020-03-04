@@ -39,7 +39,7 @@ static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
-int allowaltscreen = 1;
+int allowaltscreen = 0;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -84,7 +84,7 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	  /* 8 normal colors */
+  /* 8 normal colors */
   [0] = "#000000", /* black   */
   [1] = "#ff5555", /* red     */
   [2] = "#50fa7b", /* green   */
