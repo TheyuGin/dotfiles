@@ -15,10 +15,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
-Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'lighttiger2505/deoplete-vim-lsp'
+" Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,6 +57,7 @@ endif
 " }}}
 
 " {{{ General settings
+let g:deoplete#enable_at_startup = 1
 let g:dracula_colorterm = 0
 colorscheme dracula
 syntax on
