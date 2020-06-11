@@ -253,7 +253,7 @@ globalkeys = gears.table.join(
               function ()
                   awful.spawn.with_shell(
                       "maim -su | xclip -selection clipboard -t image/png"
-                  ) 
+                  )
               end,
               {description = "take a screenshot", group = "launcher"}),
     awful.key({ modkey,           }, "r",     function () awful.screen.focused().mypromptbox:run() end,

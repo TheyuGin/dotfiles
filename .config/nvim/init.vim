@@ -1,29 +1,23 @@
 " vim: foldmethod=marker
 
 " {{{ Plugin setup
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'dracula/vim', {'name': 'dracula'}
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'lighttiger2505/deoplete-vim-lsp'
-" Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-
-call vundle#end()
-filetype plugin indent on
+call plug#begin(stdpath('data') . '/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'dracula/vim', {'name': 'dracula'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'davidhalter/jedi-vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'lighttiger2505/deoplete-vim-lsp'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+call plug#end()
 " }}}
 
 " {{{ Language servers
