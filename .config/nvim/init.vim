@@ -1,6 +1,7 @@
 " vim: foldmethod=marker
 
 " {{{ Plugin setup
+
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'VundleVim/Vundle.vim'
 Plug 'ryanoasis/vim-devicons'
@@ -16,7 +17,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 call plug#end()
 " }}}
 
@@ -70,7 +73,7 @@ set incsearch 			" search when type search q
 set rnu 			" relative line numbers
 set laststatus=2
 set t_Co=256
-set clipboard=unnamedplus 	" unified with X clipboard
+set clipboard^=unnamedplus 	" unified with X clipboard
 set ignorecase			" case shit for search
 set smartcase
 set wildmenu            " display a menu for command auto-completion
@@ -93,4 +96,15 @@ let g:tmuxline_preset = {
       \'win'  : '#I #W',
       \'cwin' : '#I #W',
       \'z'    : '#H'}
+" }}}
+
+" {{{ Reloading init.vim
+if !exists('*ReloadVimrc')
+    fun! ReloadVimrc()
+        let save_cursor = getcurpos()
+        source $MYVIMRC
+        call setpos('.', save_cursor)
+    endfun
+endif
+autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 " }}}
