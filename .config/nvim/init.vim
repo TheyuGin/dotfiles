@@ -3,7 +3,7 @@
 " {{{ Plugin setup
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'VundleVim/Vundle.vim'
+" Plug 'VundleVim/Vundle.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -11,15 +11,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dracula/vim', {'name': 'dracula'}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'christoomey/vim-tmux-navigator'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'davidhalter/jedi-vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'lighttiger2505/deoplete-vim-lsp'
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'lighttiger2505/deoplete-vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
+" Plug 'raymond-w-ko/vim-lua-indent'
 call plug#end()
 " }}}
 
