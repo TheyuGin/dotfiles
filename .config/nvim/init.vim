@@ -13,6 +13,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'dracula/vim', {'name': 'dracula'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'chrisbra/Colorizer'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'davidhalter/jedi-vim'
