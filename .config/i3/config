@@ -29,7 +29,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec "rofi -combi-modi drun,window -show combi"
 
 # screenshoter
-bindsym $mod+Shift+s exec "maim -su | xclip -sel clipboard -target image/png"
+bindsym $mod+Shift+s exec "flameshot gui"
+
+# calc
+bindsym $mod+Shift+i exec "rofi -show calc"
+
+# password
+bindsym $mod+Shift+p exec "bwmenu"
 
 # change focus
 bindsym $mod+h focus left
