@@ -12,3 +12,10 @@ interval=persist
 command=date +%T
 interval=1
 
+[mediaplayer]
+command=./scripts/mediaplayer
+instance=spotify
+interval=1
+signal=10
+
+# vim:syntax=dosini
