@@ -14,7 +14,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias list='exa -la'
 
 if [ ! -f "$HOME/.antigen/antigen.zsh" ]; then
-    mkdir -p $HOME/.antigen && curl -L git.io/antigen > antigen.zsh
+    mkdir -p $HOME/.antigen && curl -L git.io/antigen > $HOME/.antigen/antigen.zsh
 fi
 
 source $HOME/.antigen/antigen.zsh
