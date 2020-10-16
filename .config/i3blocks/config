@@ -12,6 +12,12 @@ interval=persist
 command=date +%T
 interval=1
 
+[pulsevolume]
+command=./scripts/pulsevolume
+interval=once
+signal=1
+USE_ALSA_NAME=1
+
 [mediaplayer]
 command=./scripts/mediaplayer
 instance=spotify
