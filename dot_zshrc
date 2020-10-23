@@ -25,6 +25,7 @@ antigen bundle sudo
 antigen bundle httpie
 antigen bundle git
 antigen bundle pip
+
 antigen bundle command-not-found
 
 antigen bundle zsh-users/zsh-completions

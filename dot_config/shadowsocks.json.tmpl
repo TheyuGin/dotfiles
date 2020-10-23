@@ -1,0 +1,20 @@
+{
+    "server": "{{ range (bitwarden "item" "shadowsocks").fields -}}
+      {{ if eq .name "server" -}}
+        {{ .value }}
+      {{- end }}
+    {{- end }}",
+    "server_port": "443",
+    "local_address": "127.0.0.1",
+    "local_port": "1080",
+    "password": "{{ (bitwarden "item" "shadowsocks").login.password }}"
+    "timeout": 300,
+    "method": "xchacha20-ietf-poly1305",
+    "fast-open": true,
+    "plugin": "v2ray-plugin",
+    "plugin_opts": "tls;fast-open;path=/v2ray;host={{ range (bitwarden "item" "shadowsocks").fields -}}
+      {{ if eq .name "server" -}}
+        {{ .value }}
+      {{- end }}
+    {{- end }}"
+}
