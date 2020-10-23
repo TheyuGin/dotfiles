@@ -1,8 +1,9 @@
-[weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
+[mediaplayer]
 color=statusline
-
+command=./scripts/mediaplayer
+instance=''
+interval=1
+signal=10
 
 [pulsevolume]
 AUDIO_HIGH_SYMBOL=
@@ -15,13 +16,6 @@ command=./scripts/pulsevolume
 interval=once
 signal=1
 USE_ALSA_NAME=1
-
-[mediaplayer]
-color=statusline
-command=./scripts/mediaplayer
-instance=''
-interval=1
-signal=10
 
 [keymap]
 color=statusline
