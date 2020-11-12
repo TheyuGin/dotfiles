@@ -17,6 +17,7 @@ if [ ! -f "$HOME/.antigen/antigen.zsh" ]; then
 fi
 
 source $HOME/.antigen/antigen.zsh
+source .bwsession
 
 antigen use oh-my-zsh
 
