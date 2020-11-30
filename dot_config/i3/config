@@ -89,11 +89,11 @@ set $ws9 "9"
 set $ws10 "10"
 
 # assigning to outputs
-workspace $ws1 output HDMI-0
-workspace $ws2 output HDMI-0
-workspace $ws3 output HDMI-0
-workspace $ws4 output HDMI-0
-workspace $ws5 output HDMI-0
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
 workspace $ws6 output DVI-D-1
 workspace $ws7 output DVI-D-1
 workspace $ws8 output DVI-D-1
