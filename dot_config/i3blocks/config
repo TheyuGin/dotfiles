@@ -1,9 +1,26 @@
 [mediaplayer]
 color=statusline
 command=./scripts/mediaplayer
-instance=''
+instance='spotify'
 interval=1
 signal=10
+
+[cpu_util_detailed]
+command=./scripts/cpu_util_detailed
+label=CPU
+markup=pango
+interval=-2
+
+[memory]
+command=./scripts/memory
+label=MEM
+interval=5
+
+[memory]
+command=./scripts/memory
+label=SWAP
+interval=5
+instance=swap
 
 [pulsevolume]
 AUDIO_HIGH_SYMBOL=
@@ -25,7 +42,7 @@ interval=persist
 
 [time]
 color=statusline
-command=date +'%T %e/%m/%y'
+command=date +'%T %Y/%m/%e'
 interval=1
 
 # vim:syntax=dosini
