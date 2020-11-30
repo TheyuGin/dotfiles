@@ -1,0 +1,4 @@
+{
+    "lua.version": "Lua 5.4",
+    "python.jediEnabled": false
+}

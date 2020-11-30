@@ -32,36 +32,6 @@ Plug 'chrisbra/Colorizer'
 call plug#end()
 " }}}
 
-" {{{ Language servers
-" python lsp setup
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-" html lsp setup
-if executable('html-languageserver')                         
-  au User lsp_setup call lsp#register_server({               
-    \ 'name': 'html-languageserver',                     
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},                                   
-    \ 'whitelist': ['html'],                             
-  \ })                                                       
-endif      
-
-" css language server
-if executable('css-languageserver')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'css-languageserver',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
-        \ 'whitelist': ['css', 'less', 'sass'],
-        \ })
-endif
-" }}}
-
 " {{{ General settings
 let g:deoplete#enable_at_startup = 1
 let g:dracula_colorterm = 0
