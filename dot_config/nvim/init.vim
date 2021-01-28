@@ -9,7 +9,6 @@ if empty(glob(stdpath('data') . '/site/autoload/plug.vim'))
 endif
 
 call plug#begin(stdpath('data') . '/plugged')
-" Plug 'VundleVim/Vundle.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -20,23 +19,22 @@ Plug 'dracula/vim', {'name': 'dracula'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/Colorizer'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'davidhalter/jedi-vim'
-" Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'lighttiger2505/deoplete-vim-lsp'
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Plug 'raymond-w-ko/vim-lua-indent'
+Plug 'psf/black', {'branch': 'stable'}
 call plug#end()
 " }}}
 
 " {{{ General settings
-let g:deoplete#enable_at_startup = 1
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
 let g:dracula_colorterm = 0
 colorscheme dracula
 syntax on
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set signcolumn=yes
 set autoindent			" autoindent duh
 set shiftround 			" round indent to multime of 'shiftwidth'
 set expandtab			" tab is spaces
