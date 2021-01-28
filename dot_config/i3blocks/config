@@ -1,5 +1,5 @@
 [mediaplayer]
-color=statusline
+color="#f8f8f2"
 command=./scripts/mediaplayer
 instance='spotify'
 interval=1
@@ -26,7 +26,7 @@ instance=swap
 AUDIO_HIGH_SYMBOL=
 AUDIO_MED_SYMBOL=
 AUDIO_MUTED_SYMBOL=
-DEFAULT_COLOR=statusline
+DEFAULT_COLOR="#f8f8f2"
 MUTED_COLOR="#44475A"
 
 command=./scripts/pulsevolume
@@ -35,13 +35,13 @@ signal=1
 USE_ALSA_NAME=1
 
 [keymap]
-color=statusline
+color="#f8f8f2"
 label=⌨
 command=xkb-switch -W
 interval=persist
 
 [time]
-color=statusline
+color="#f8f8f2"
 command=date +'%T %Y/%m/%e'
 interval=1
 
