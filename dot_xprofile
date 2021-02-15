@@ -26,4 +26,4 @@
 xset r rate 175 50
 xbanish & disown
 
-setxkbmap -layout us,ru -option grp:alt_shift_toggle -option ctrl:nocaps
+setxkbmap -layout us,ru -option grp:alt_shift_toggle
