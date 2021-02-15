@@ -129,6 +129,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+# autostart section
+exec --no-startup-id nm-applet
+
 # exit i3 (logs you out of your X session)
 mode "exit i3? y/n" {
     bindsym y exec "i3-msg exit"
@@ -162,5 +165,6 @@ bar {
       urgent_workspace   #FF5555 #FF5555 #F8F8F2
       binding_mode       #FF5555 #FF5555 #F8F8F2
     }
+    tray_output primary
     status_command i3blocks
 }
