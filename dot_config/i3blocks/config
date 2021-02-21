@@ -9,22 +9,21 @@ signal=10
 command=./scripts/cpu_util_detailed
 label=CPU
 markup=pango
-interval=-2
+interval=repeat
 
 [memory]
 command=./scripts/memory
-label=MEM
+label=MEM 
 interval=5
 
 [memory]
 command=./scripts/memory
-label=SWAP
+label=SWAP 
 interval=5
 instance=swap
 
 [i3-volume]
-label= 
-command=i3-volume output i3blocks -t i3blocks -u 10
+command=i3-volume output "%i %v\n" -t i3blocks -u 10
 interval=repeat
 signal=10
 color="#f8f8f2"
@@ -34,7 +33,7 @@ markup=pango
 [keymap]
 color="#f8f8f2"
 label=⌨
-command=xkb-switch -W
+command=xkb-switch && xkb-switch -W
 interval=persist
 
 [time]
