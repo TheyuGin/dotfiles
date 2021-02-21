@@ -22,17 +22,14 @@ label=SWAP
 interval=5
 instance=swap
 
-[pulsevolume]
-AUDIO_HIGH_SYMBOL=
-AUDIO_MED_SYMBOL=
-AUDIO_MUTED_SYMBOL=
-DEFAULT_COLOR="#f8f8f2"
-MUTED_COLOR="#44475A"
-
-command=./scripts/pulsevolume
-interval=once
-signal=1
-USE_ALSA_NAME=1
+[i3-volume]
+label= 
+command=i3-volume output i3blocks -t i3blocks -u 10
+interval=repeat
+signal=10
+color="#f8f8f2"
+separator_block_width=10
+markup=pango
 
 [keymap]
 color="#f8f8f2"
