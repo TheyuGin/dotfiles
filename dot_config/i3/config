@@ -9,6 +9,8 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 default_border pixel 3
 for_window [class="TelegramDesktop"] border pixel 3
+for_window [class="flameshot"] floating enable
+for_window [class="mpv"] floating enable
 client.background       #F8F8F2
 
 font pango:monospace 10
